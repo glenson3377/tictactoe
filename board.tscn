@@ -1,0 +1,247 @@
+[gd_scene load_steps=14 format=3 uid="uid://d0nbb4tb7yfpo"]
+
+[ext_resource type="Texture2D" uid="uid://ubx7stokj504" path="res://metal cage.jpg" id="1_i50vo"]
+[ext_resource type="Script" path="res://board.gd" id="1_w3byo"]
+[ext_resource type="AudioStream" uid="uid://bq4b2tiy6dx1b" path="res://FLO  Walk Like This Visualiser.mp3" id="3_wyxgo"]
+[ext_resource type="AudioStream" uid="uid://bhy2hmgvj32w3" path="res://Avengers Theme Kazoo Orchestra.mp3" id="4_eifob"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tq4bw"]
+texture = ExtResource("1_i50vo")
+
+[sub_resource type="Gradient" id="Gradient_hbodr"]
+offsets = PackedFloat32Array(0, 0.99061, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.826291, 0.826291, 0.826291, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_pc8re"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_xx8v8"]
+width = 100
+height = 100
+color_ramp = SubResource("Gradient_hbodr")
+noise = SubResource("FastNoiseLite_pc8re")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_klrb4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tq7bg"]
+bg_color = Color(0.142858, 0.142858, 0.142858, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_x63lt"]
+font_size = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tnb6h"]
+bg_color = Color(0.111786, 0.382724, 0.846306, 1)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_vv7i4"]
+streams_count = 2
+stream_0/stream = ExtResource("3_wyxgo")
+stream_1/stream = ExtResource("4_eifob")
+
+[node name="board" type="Node2D"]
+position = Vector2(400, 300)
+script = ExtResource("1_w3byo")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="backpanel" type="Panel" parent="CanvasGroup"]
+clip_contents = true
+offset_left = -400.0
+offset_top = -300.0
+offset_right = -360.0
+offset_bottom = -260.0
+scale = Vector2(19.9958, 15.1141)
+theme_override_styles/panel = SubResource("StyleBoxTexture_tq4bw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CanvasGroup"]
+
+[node name="GridContainer" type="GridContainer" parent="CanvasGroup/CanvasLayer"]
+custom_minimum_size = Vector2(100, 100)
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -149.0
+offset_right = 154.0
+offset_bottom = 159.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="TextureButton1" type="TextureButton" parent="CanvasGroup/CanvasLayer/GridContainer" groups=["buttons"]]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = SubResource("NoiseTexture2D_xx8v8")
+texture_disabled = SubResource("CompressedTexture2D_klrb4")
+
+[node name="TextureButton2" type="TextureButton" parent="CanvasGroup/CanvasLayer/GridContainer" groups=["buttons"]]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = SubResource("NoiseTexture2D_xx8v8")
+
+[node name="TextureButton3" type="TextureButton" parent="CanvasGroup/CanvasLayer/GridContainer" groups=["buttons"]]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = SubResource("NoiseTexture2D_xx8v8")
+
+[node name="TextureButton4" type="TextureButton" parent="CanvasGroup/CanvasLayer/GridContainer" groups=["buttons"]]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = SubResource("NoiseTexture2D_xx8v8")
+
+[node name="TextureButton5" type="TextureButton" parent="CanvasGroup/CanvasLayer/GridContainer" groups=["buttons"]]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = SubResource("NoiseTexture2D_xx8v8")
+
+[node name="TextureButton6" type="TextureButton" parent="CanvasGroup/CanvasLayer/GridContainer" groups=["buttons"]]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = SubResource("NoiseTexture2D_xx8v8")
+
+[node name="TextureButton7" type="TextureButton" parent="CanvasGroup/CanvasLayer/GridContainer" groups=["buttons"]]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = SubResource("NoiseTexture2D_xx8v8")
+
+[node name="TextureButton8" type="TextureButton" parent="CanvasGroup/CanvasLayer/GridContainer" groups=["buttons"]]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = SubResource("NoiseTexture2D_xx8v8")
+
+[node name="TextureButton9" type="TextureButton" parent="CanvasGroup/CanvasLayer/GridContainer" groups=["buttons"]]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = SubResource("NoiseTexture2D_xx8v8")
+
+[node name="Panel" type="Panel" parent="CanvasGroup/CanvasLayer"]
+offset_left = 357.0
+offset_top = 2.0
+offset_right = 444.0
+offset_bottom = 58.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tq7bg")
+
+[node name="GameLabel" type="Label" parent="CanvasGroup/CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -28.0
+offset_right = 43.5
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Tic-Tac-Toe"
+
+[node name="playerlabel" type="Label" parent="CanvasGroup/CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -1.0
+offset_right = 43.5
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Turn"
+label_settings = SubResource("LabelSettings_x63lt")
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="CanvasGroup/CanvasLayer/Panel"]
+layout_mode = 0
+offset_top = 56.0
+offset_right = 40.0
+offset_bottom = 96.0
+scale = Vector2(2.16, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_tnb6h")
+
+[node name="player" type="Label" parent="CanvasGroup/CanvasLayer/Panel/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 67.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.462964, 1.08)
+label_settings = SubResource("LabelSettings_x63lt")
+horizontal_alignment = 1
+
+[node name="winner panel" type="Panel" parent="CanvasGroup/CanvasLayer"]
+visible = false
+offset_left = 246.0
+offset_top = 151.0
+offset_right = 554.0
+offset_bottom = 459.0
+
+[node name="Label" type="Label" parent="CanvasGroup/CanvasLayer/winner panel"]
+layout_mode = 0
+offset_left = 111.0
+offset_right = 194.0
+offset_bottom = 23.0
+text = "Winner!!!!!!"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasGroup/CanvasLayer/winner panel/Label"]
+modulate = Color(1, 1, 1, 0.533333)
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.94023
+anchor_top = -2.47809
+anchor_right = 2.97623
+anchor_bottom = 15.2604
+offset_left = 4.039
+offset_top = 3.996
+offset_right = -4.027
+offset_bottom = -3.989
+metadata/_edit_use_anchors_ = true
+
+[node name="restart button" type="Button" parent="CanvasGroup/CanvasLayer/winner panel/Label"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 208.0
+offset_right = 75.0
+offset_bottom = 239.0
+text = "Restart"
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_vv7i4")
+
+[connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/TextureButton1" to="." method="_on_texture_button_1_pressed"]
+[connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/TextureButton4" to="." method="_on_texture_button_4_pressed"]
+[connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/TextureButton5" to="." method="_on_texture_button_5_pressed"]
+[connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/TextureButton6" to="." method="_on_texture_button_6_pressed"]
+[connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/TextureButton7" to="." method="_on_texture_button_7_pressed"]
+[connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/TextureButton8" to="." method="_on_texture_button_8_pressed"]
+[connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/TextureButton9" to="." method="_on_texture_button_9_pressed"]
+[connection signal="pressed" from="CanvasGroup/CanvasLayer/winner panel/Label/restart button" to="." method="_on_restart_button_pressed"]

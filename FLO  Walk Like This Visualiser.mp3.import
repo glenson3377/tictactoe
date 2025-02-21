@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bq4b2tiy6dx1b"
+path="res://.godot/imported/FLO  Walk Like This Visualiser.mp3-16103c5110c7c4101966e9e5c51aaaf5.mp3str"
+
+[deps]
+
+source_file="res://FLO  Walk Like This Visualiser.mp3"
+dest_files=["res://.godot/imported/FLO  Walk Like This Visualiser.mp3-16103c5110c7c4101966e9e5c51aaaf5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

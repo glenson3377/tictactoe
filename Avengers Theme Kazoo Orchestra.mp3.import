@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhy2hmgvj32w3"
+path="res://.godot/imported/Avengers Theme Kazoo Orchestra.mp3-6ee1adeef8f38f4d9484cbc353664b3d.mp3str"
+
+[deps]
+
+source_file="res://Avengers Theme Kazoo Orchestra.mp3"
+dest_files=["res://.godot/imported/Avengers Theme Kazoo Orchestra.mp3-6ee1adeef8f38f4d9484cbc353664b3d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

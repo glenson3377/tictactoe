@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://by3c8axgu6lik"
+path="res://.godot/imported/Negawatt Negawatt Negawatt.mp3-3d4d5e96c2db1083158d447773c542c7.mp3str"
+
+[deps]
+
+source_file="res://Negawatt Negawatt Negawatt.mp3"
+dest_files=["res://.godot/imported/Negawatt Negawatt Negawatt.mp3-3d4d5e96c2db1083158d447773c542c7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,154 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0nbb4tb7yfpo"]
+
+[ext_resource type="Texture2D" uid="uid://ubx7stokj504" path="res://metal cage.jpg" id="1_i50vo"]
+[ext_resource type="Script" path="res://board.gd" id="1_w3byo"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tq4bw"]
+texture = ExtResource("1_i50vo")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tq7bg"]
+bg_color = Color(0.142858, 0.142858, 0.142858, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_x63lt"]
+font_size = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tnb6h"]
+bg_color = Color(0.111786, 0.382724, 0.846306, 1)
+
+[node name="board" type="Node2D"]
+position = Vector2(400, 300)
+script = ExtResource("1_w3byo")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="backpanel" type="Panel" parent="CanvasGroup"]
+clip_contents = true
+offset_left = -400.0
+offset_top = -300.0
+offset_right = -360.0
+offset_bottom = -260.0
+scale = Vector2(19.9958, 15.1141)
+theme_override_styles/panel = SubResource("StyleBoxTexture_tq4bw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CanvasGroup"]
+
+[node name="Panel" type="Panel" parent="CanvasGroup/CanvasLayer"]
+offset_left = 357.0
+offset_top = 2.0
+offset_right = 444.0
+offset_bottom = 58.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tq7bg")
+
+[node name="GameLabel" type="Label" parent="CanvasGroup/CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -28.0
+offset_right = 43.5
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Tic-Tac-Toe"
+
+[node name="playerlabel" type="Label" parent="CanvasGroup/CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -1.0
+offset_right = 43.5
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Turn"
+label_settings = SubResource("LabelSettings_x63lt")
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="CanvasGroup/CanvasLayer/Panel"]
+layout_mode = 0
+offset_top = 56.0
+offset_right = 40.0
+offset_bottom = 96.0
+scale = Vector2(2.16, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_tnb6h")
+
+[node name="player" type="Label" parent="CanvasGroup/CanvasLayer/Panel/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 67.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.462964, 1.08)
+text = "Turn"
+label_settings = SubResource("LabelSettings_x63lt")
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="CanvasGroup/CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="Button1" type="Button" parent="CanvasGroup/CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="CanvasGroup/CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="CanvasGroup/CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="CanvasGroup/CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Button5" type="Button" parent="CanvasGroup/CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Button6" type="Button" parent="CanvasGroup/CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Button7" type="Button" parent="CanvasGroup/CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Button8" type="Button" parent="CanvasGroup/CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Button9" type="Button" parent="CanvasGroup/CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/Button1" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/Button8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/Button9" to="." method="_on_button_9_pressed"]

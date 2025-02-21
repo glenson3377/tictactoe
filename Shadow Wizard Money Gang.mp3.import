@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bv8gj2swta40d"
+path="res://.godot/imported/Shadow Wizard Money Gang.mp3-88e7ac03e42c008e1e5d01d0e07b6010.mp3str"
+
+[deps]
+
+source_file="res://Shadow Wizard Money Gang.mp3"
+dest_files=["res://.godot/imported/Shadow Wizard Money Gang.mp3-88e7ac03e42c008e1e5d01d0e07b6010.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

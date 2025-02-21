@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cf6nnb8wndshn"
+path="res://.godot/imported/Mokeys Anger Sr Pelo Meme Sound Effect HD.mp3-d32a8fcc197088017df2970f6e68527e.mp3str"
+
+[deps]
+
+source_file="res://Mokeys Anger Sr Pelo Meme Sound Effect HD.mp3"
+dest_files=["res://.godot/imported/Mokeys Anger Sr Pelo Meme Sound Effect HD.mp3-d32a8fcc197088017df2970f6e68527e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

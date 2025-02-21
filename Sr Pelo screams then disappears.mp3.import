@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://coc6q0h44501f"
+path="res://.godot/imported/Sr Pelo screams then disappears.mp3-b3d254425e339308670ca2f889bf11da.mp3str"
+
+[deps]
+
+source_file="res://Sr Pelo screams then disappears.mp3"
+dest_files=["res://.godot/imported/Sr Pelo screams then disappears.mp3-b3d254425e339308670ca2f889bf11da.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
