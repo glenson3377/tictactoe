@@ -1,8 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://d0nbb4tb7yfpo"]
+[gd_scene load_steps=17 format=3 uid="uid://d0nbb4tb7yfpo"]
 
 [ext_resource type="Texture2D" uid="uid://ubx7stokj504" path="res://metal cage.jpg" id="1_i50vo"]
 [ext_resource type="Script" path="res://board.gd" id="1_w3byo"]
-[ext_resource type="AudioStream" uid="uid://bq4b2tiy6dx1b" path="res://FLO  Walk Like This Visualiser.mp3" id="3_wyxgo"]
 [ext_resource type="AudioStream" uid="uid://bhy2hmgvj32w3" path="res://Avengers Theme Kazoo Orchestra.mp3" id="4_eifob"]
 [ext_resource type="AudioStream" uid="uid://cye40fukxn23" path="res://BOOM sound effect.mp3" id="5_0vpec"]
 [ext_resource type="AudioStream" uid="uid://cf6nnb8wndshn" path="res://Mokeys Anger Sr Pelo Meme Sound Effect HD.mp3" id="6_2o4dy"]
@@ -40,11 +39,6 @@ font_size = 36
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tnb6h"]
 bg_color = Color(0.111786, 0.382724, 0.846306, 1)
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_vv7i4"]
-streams_count = 2
-stream_0/stream = ExtResource("3_wyxgo")
-stream_1/stream = ExtResource("4_eifob")
-
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_iwhly"]
 streams_count = 4
 stream_0/stream = ExtResource("5_0vpec")
@@ -62,28 +56,38 @@ script = ExtResource("1_w3byo")
 clip_contents = true
 offset_left = -400.0
 offset_top = -300.0
-offset_right = -360.0
-offset_bottom = -260.0
+offset_right = -346.0
+offset_bottom = -236.0
+scale = Vector2(19.9958, 15.1141)
+theme_override_styles/panel = SubResource("StyleBoxTexture_tq4bw")
+
+[node name="backpanel2" type="Panel" parent="CanvasGroup"]
+clip_contents = true
+offset_left = -400.0
+offset_top = 672.0
+offset_right = -346.0
+offset_bottom = 735.0
 scale = Vector2(19.9958, 15.1141)
 theme_override_styles/panel = SubResource("StyleBoxTexture_tq4bw")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="CanvasGroup"]
 
 [node name="GridContainer" type="GridContainer" parent="CanvasGroup/CanvasLayer"]
-custom_minimum_size = Vector2(100, 100)
 layout_direction = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -154.0
-offset_top = -149.0
-offset_right = 154.0
-offset_bottom = 159.0
+offset_left = -413.0
+offset_top = -363.0
+offset_right = -105.0
+offset_bottom = -55.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2.67, 2.67)
 columns = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureButton1" type="TextureButton" parent="CanvasGroup/CanvasLayer/GridContainer" groups=["buttons"]]
 clip_contents = true
@@ -141,10 +145,11 @@ layout_mode = 2
 texture_normal = SubResource("NoiseTexture2D_xx8v8")
 
 [node name="Panel" type="Panel" parent="CanvasGroup/CanvasLayer"]
-offset_left = 357.0
-offset_top = 2.0
-offset_right = 444.0
-offset_bottom = 58.0
+offset_left = 363.0
+offset_top = 4.0
+offset_right = 450.0
+offset_bottom = 60.0
+scale = Vector2(4.12, 4.12)
 theme_override_styles/panel = SubResource("StyleBoxFlat_tq7bg")
 
 [node name="GameLabel" type="Label" parent="CanvasGroup/CanvasLayer/Panel"]
@@ -206,10 +211,11 @@ horizontal_alignment = 1
 
 [node name="winner panel" type="Panel" parent="CanvasGroup/CanvasLayer"]
 visible = false
-offset_left = 246.0
-offset_top = 151.0
-offset_right = 554.0
-offset_bottom = 459.0
+offset_left = 126.0
+offset_top = 597.0
+offset_right = 434.0
+offset_bottom = 905.0
+scale = Vector2(2.685, 2.685)
 
 [node name="Label" type="Label" parent="CanvasGroup/CanvasLayer/winner panel"]
 layout_mode = 0
@@ -244,8 +250,7 @@ text = "Restart"
 metadata/_edit_use_anchors_ = true
 
 [node name="background" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamRandomizer_vv7i4")
-volume_db = -21.55
+stream = ExtResource("4_eifob")
 
 [node name="reactions" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_iwhly")
