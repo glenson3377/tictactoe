@@ -1,9 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://d0nbb4tb7yfpo"]
+[gd_scene load_steps=19 format=3 uid="uid://d0nbb4tb7yfpo"]
 
 [ext_resource type="Texture2D" uid="uid://ubx7stokj504" path="res://metal cage.jpg" id="1_i50vo"]
 [ext_resource type="Script" path="res://board.gd" id="1_w3byo"]
 [ext_resource type="AudioStream" uid="uid://bq4b2tiy6dx1b" path="res://FLO  Walk Like This Visualiser.mp3" id="3_wyxgo"]
 [ext_resource type="AudioStream" uid="uid://bhy2hmgvj32w3" path="res://Avengers Theme Kazoo Orchestra.mp3" id="4_eifob"]
+[ext_resource type="AudioStream" uid="uid://cye40fukxn23" path="res://BOOM sound effect.mp3" id="5_0vpec"]
+[ext_resource type="AudioStream" uid="uid://cf6nnb8wndshn" path="res://Mokeys Anger Sr Pelo Meme Sound Effect HD.mp3" id="6_2o4dy"]
+[ext_resource type="AudioStream" uid="uid://coc6q0h44501f" path="res://Sr Pelo screams then disappears.mp3" id="7_8ye34"]
+[ext_resource type="AudioStream" uid="uid://by3c8axgu6lik" path="res://Negawatt Negawatt Negawatt.mp3" id="8_1nxv6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tq4bw"]
 texture = ExtResource("1_i50vo")
@@ -40,6 +44,13 @@ bg_color = Color(0.111786, 0.382724, 0.846306, 1)
 streams_count = 2
 stream_0/stream = ExtResource("3_wyxgo")
 stream_1/stream = ExtResource("4_eifob")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_iwhly"]
+streams_count = 4
+stream_0/stream = ExtResource("5_0vpec")
+stream_1/stream = ExtResource("6_2o4dy")
+stream_2/stream = ExtResource("7_8ye34")
+stream_3/stream = ExtResource("8_1nxv6")
 
 [node name="board" type="Node2D"]
 position = Vector2(400, 300)
@@ -232,8 +243,12 @@ offset_bottom = 239.0
 text = "Restart"
 metadata/_edit_use_anchors_ = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="background" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_vv7i4")
+volume_db = -21.55
+
+[node name="reactions" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_iwhly")
 
 [connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/TextureButton1" to="." method="_on_texture_button_1_pressed"]
 [connection signal="pressed" from="CanvasGroup/CanvasLayer/GridContainer/TextureButton2" to="." method="_on_texture_button_2_pressed"]

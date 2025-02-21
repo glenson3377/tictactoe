@@ -10,7 +10,7 @@ var click = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print(buttonvalue)
-	$AudioStreamPlayer.play()
+	$background.play()
 
 
 func playerpress(button):
@@ -43,6 +43,7 @@ func playerpress(button):
 	if click == 8:
 		tie()
 	else:
+		$reactions.play()
 		click = click +1
 
 func winner(): # check if somebody won yet
@@ -84,7 +85,7 @@ func winnermetrix(array, po1, po2, po3):
 		
 #winning banner
 func won():
-	$AudioStreamPlayer.stop()
+	$background.stop()
 	#disable all buttons
 	for i in range(9):
 		get_tree().call_group("buttons", "set_disabled", true)
